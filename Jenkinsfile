@@ -43,6 +43,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', registryCrendential){
                         dockerImage.push()
+                        dockerImage.push('latest')
                     }
                 }
             }
